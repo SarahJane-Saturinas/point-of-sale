@@ -1,10 +1,26 @@
-﻿/* Additional custom styling if necessary */
+/* Make the table responsive */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+/* Additional custom styling if necessary */
 .table thead {
     background-color: #f8f9fa;
 }
 
 .table th, .table td {
     vertical-align: middle;
+    text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Allow wrapping on smaller screens */
+@media (max-width: 768px) {
+    .table th, .table td {
+        white-space: normal; /* Allows text wrapping */
+        font-size: 14px; /* Reduces font size for better readability */
+    }
 }
 
 /* Style for the action button (Receipt link) */
@@ -15,19 +31,16 @@
     padding: 5px 10px;
     border-radius: 4px;
     font-weight: bold;
+    display: inline-block;
 }
 
-    .action-btn:hover {
-        background-color: #0056b3;
-    }
+.action-btn:hover {
+    background-color: #0056b3;
+}
 
 /* Hover effect for table rows */
 .table-hover tbody tr:hover {
     background-color: #f1f1f1;
-}
-
-a {
-    text-decoration: none;
 }
 
 /* Center-align the text for headers */
@@ -35,8 +48,15 @@ a {
     text-align: center;
 }
 
-
 /* Add a bit of spacing and center the page */
 .container {
     padding: 20px;
+}
+
+/* Ensure buttons inside tables don’t break layout */
+@media (max-width: 576px) {
+    .action-btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
 }

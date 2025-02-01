@@ -1,0 +1,59 @@
+
+/* Base font size for better responsiveness */
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Improve focus styles for accessibility */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.8), 
+              0 0 0 0.3rem rgba(37, 140, 251, 0.8);
+}
+
+/* Ensure full-page height and sticky footer */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-bottom: 60px;
+}
+
+/* Make sure the main content expands */
+main {
+  flex: 1;
+}
+
+/* Ensure buttons have proper touch-friendly spacing */
+.btn {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
